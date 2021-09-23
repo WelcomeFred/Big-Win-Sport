@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LoE-GN-4lR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Example-->
+        <scene sceneID="CVQ-0P-HTV">
+            <objects>
+                <viewController storyboardIdentifier="GuideViewController" id="SqA-bT-9qK" customClass="Page_Control_ViewController" customModule="WinOdds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sxh-0p-Y1y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="F9X-u3-YSN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHr-Cl-9Wz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-0A-4Rd">
+                                <rect key="frame" x="206.5" y="758.5" width="1" height="27.5"/>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tec-mr-JuQ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F9X-u3-YSN" firstAttribute="leading" secondItem="tec-mr-JuQ" secondAttribute="leading" id="342-Um-XAl"/>
+                            <constraint firstItem="NHr-Cl-9Wz" firstAttribute="top" secondItem="tec-mr-JuQ" secondAttribute="top" id="7iU-cN-2Tg"/>
+                            <constraint firstItem="nsg-0A-4Rd" firstAttribute="width" secondItem="Sxh-0p-Y1y" secondAttribute="height" multiplier="0.5:667" id="CKr-ux-CYd"/>
+                            <constraint firstItem="NHr-Cl-9Wz" firstAttribute="trailing" secondItem="tec-mr-JuQ" secondAttribute="trailing" id="Gdn-vZ-fzt"/>
+                            <constraint firstItem="tec-mr-JuQ" firstAttribute="bottom" secondItem="NHr-Cl-9Wz" secondAttribute="bottom" id="Ruh-Gb-eCN"/>
+                            <constraint firstItem="F9X-u3-YSN" firstAttribute="trailing" secondItem="tec-mr-JuQ" secondAttribute="trailing" id="YBB-Bp-nF2"/>
+                            <constraint firstItem="tec-mr-JuQ" firstAttribute="bottom" secondItem="nsg-0A-4Rd" secondAttribute="bottom" constant="27" id="bfQ-Fu-S8X"/>
+                            <constraint firstItem="nsg-0A-4Rd" firstAttribute="centerX" secondItem="tec-mr-JuQ" secondAttribute="centerX" id="hXg-ME-SKk"/>
+                            <constraint firstItem="NHr-Cl-9Wz" firstAttribute="leading" secondItem="tec-mr-JuQ" secondAttribute="leading" id="jeZ-kJ-jVh"/>
+                            <constraint firstItem="F9X-u3-YSN" firstAttribute="top" secondItem="Sxh-0p-Y1y" secondAttribute="top" id="sxL-cw-tob"/>
+                            <constraint firstItem="F9X-u3-YSN" firstAttribute="bottom" secondItem="tec-mr-JuQ" secondAttribute="bottom" id="zyz-El-MYA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Example" image="guide" id="ttA-rC-J5c"/>
+                    <connections>
+                        <outlet property="pageControl" destination="nsg-0A-4Rd" id="uGc-BS-Bkc"/>
+                        <outlet property="scrollView" destination="NHr-Cl-9Wz" id="yyI-n8-7X9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DmA-LP-cro" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1044" y="-1107.7961019490256"/>
+        </scene>
+        <!--Once Page View Controller-->
+        <scene sceneID="PnQ-ht-Etx">
+            <objects>
+                <viewController id="LoE-GN-4lR" customClass="OncePage_ViewController" customModule="WinOdds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IOE-ht-jL7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-XU-58P">
+                                <rect key="frame" x="0.0" y="254.5" width="414" height="233.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W4f-XU-58P" secondAttribute="height" multiplier="1847:1042" id="asd-yS-RMe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vhu-gy-XDP"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W4f-XU-58P" firstAttribute="centerX" secondItem="Vhu-gy-XDP" secondAttribute="centerX" id="SEK-Za-qiN"/>
+                            <constraint firstItem="W4f-XU-58P" firstAttribute="width" secondItem="IOE-ht-jL7" secondAttribute="width" id="Xdd-bi-oNm"/>
+                            <constraint firstItem="W4f-XU-58P" firstAttribute="centerY" secondItem="Vhu-gy-XDP" secondAttribute="centerY" multiplier="0.82" id="kuF-Bv-3Om"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewForAnimation" destination="W4f-XU-58P" id="OEi-6C-pfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1h-Ja-yfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2572" y="-348"/>
+        </scene>
+        <!--Base Tab BarVC-->
+        <scene sceneID="Awv-ds-tyo">
+            <objects>
+                <tabBarController storyboardIdentifier="BaseTabBarVC" modalPresentationStyle="fullScreen" id="Fdf-0D-Fy1" customClass="BaseTabBarVC" customModule="WinOdds" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="XDJ-86-Kqm" customClass="TabBar_Show" customModule="WinOdds" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SqA-bT-9qK" kind="relationship" relationship="viewControllers" id="1dj-nl-kqZ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="E47-WZ-VAR"/>
+                        <segue destination="l9f-PE-iVE" kind="relationship" relationship="viewControllers" id="HQ2-Mj-Vec"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5Y-HP-3Bn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1836" y="-346"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="WinOdds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="mCg-ui-Sj4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkY-Mm-b66" customClass="MyView" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="52" y="184.5" width="310.5" height="9"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9X-OY-Htf" customClass="MyView" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="203" y="215.5" width="8" height="276.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJF-in-Fvn" customClass="MyLabel" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="123" width="178" height="63"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Price: ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="47" name="Charter-BoldItalic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98039215686274506" green="0.2265708776328913" blue="0.47418085970807605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="2" height="0.0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColorForCustom">
+                                        <color key="value" red="0.98039215690000003" green="0.2265708776" blue="0.47418085970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetForCustom">
+                                        <size key="value" width="2" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusForCustom">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Factor" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGD-Ry-egl" customClass="MyTextField" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="49.5" y="244.5" width="130" height="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.27656875857452423" green="0.38677653785251986" blue="0.33023233075860553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Factor" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-yZ-omg" customClass="MyTextField" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="49.5" y="335.5" width="130" height="36.5"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.27656875860000002" green="0.38677653789999999" blue="0.33023233079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Factor" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgi-Fq-M4q" customClass="MyTextField" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="49.5" y="425.5" width="130" height="36.5"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.27656875860000002" green="0.38677653789999999" blue="0.33023233079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgp-rv-oNT" customClass="MyLabel" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="233" y="335.5" width="130" height="36.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.27656875860000002" green="0.38677653789999999" blue="0.33023233079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVw-oe-R8C" customClass="MyLabel" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="233" y="244.5" width="130" height="36.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.27656875860000002" green="0.38677653789999999" blue="0.33023233079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.40000000000000002" green="0.80000000000000004" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5o-51-XpC" customClass="MyTextField" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="205" y="125.5" width="157.5" height="58"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.27656875860000002" green="0.38677653789999999" blue="0.33023233079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiH-0S-wl7" customClass="MyLabel" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="481.5" width="414" height="118.5"/>
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="60"/>
+                                <color key="textColor" red="0.27656875860000002" green="0.38677653789999999" blue="0.33023233079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.91555470230000002" green="0.57246916150854699" blue="0.74771380841111801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="0.0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColorForCustom">
+                                        <color key="value" red="0.98039215690000003" green="0.2265708776" blue="0.47418085970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetForCustom">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusForCustom">
+                                        <real key="value" value="29"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ble-AW-7GU" customClass="MyButton" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="112" y="618" width="190" height="65"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.29803921568627451" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" red="0.91372549020000005" green="0.29803921570000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="titleShadowOffset" width="2" height="0.0"/>
+                                <state key="normal" title="Check">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleShadowColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWith">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H56-dt-xON"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvI-YR-o2p" customClass="MyLabel" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="233" y="425.5" width="130" height="36.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.27656875860000002" green="0.38677653789999999" blue="0.33023233079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow the instructions and fill the fields correctly!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-uM-jRE" customClass="MyLabel" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="35" y="36.5" width="344" height="24.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetForCustom">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusForCustom">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r7k-th-Ffw"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sJF-in-Fvn" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.38" id="0a3-5M-7Xu"/>
+                            <constraint firstItem="aiH-0S-wl7" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" id="1CZ-VG-Sc1"/>
+                            <constraint firstItem="Vgi-Fq-M4q" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.045" id="1t4-k4-F8D"/>
+                            <constraint firstItem="uVw-oe-R8C" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.314" id="24v-7c-hVj"/>
+                            <constraint firstItem="w9X-OY-Htf" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.02" id="42F-HC-qq7"/>
+                            <constraint firstItem="sgp-rv-oNT" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" multiplier="1.44" id="7pF-IP-Gdz"/>
+                            <constraint firstItem="mCg-ui-Sj4" firstAttribute="leading" secondItem="r7k-th-Ffw" secondAttribute="leading" id="8vb-Xe-Lhb"/>
+                            <constraint firstItem="K5o-51-XpC" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.38" id="BCC-dm-wkD"/>
+                            <constraint firstItem="TGD-Ry-egl" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.647" id="EM3-mP-Ecf"/>
+                            <constraint firstItem="Vgi-Fq-M4q" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" multiplier="0.554" id="FJd-ah-hOn"/>
+                            <constraint firstItem="uVw-oe-R8C" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" multiplier="1.44" id="H1v-Mc-NS6"/>
+                            <constraint firstItem="sJF-in-Fvn" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.43" id="H8P-cQ-frd"/>
+                            <constraint firstItem="ble-AW-7GU" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" id="HXH-fG-AMl"/>
+                            <constraint firstItem="aiH-0S-wl7" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.146" id="Hhn-ZZ-50N"/>
+                            <constraint firstItem="w9X-OY-Htf" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" id="HqA-2s-khI"/>
+                            <constraint firstItem="Pz0-uM-jRE" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.03" id="IEO-tK-HYl"/>
+                            <constraint firstItem="sJF-in-Fvn" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.078" id="IKC-aG-wz4"/>
+                            <constraint firstItem="Pz0-uM-jRE" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" id="JOP-3H-2uh"/>
+                            <constraint firstItem="mCg-ui-Sj4" firstAttribute="trailing" secondItem="r7k-th-Ffw" secondAttribute="trailing" id="Jgh-cU-wE9"/>
+                            <constraint firstItem="cdY-yZ-omg" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" multiplier="0.554" id="LHB-Uy-jrS"/>
+                            <constraint firstItem="mCg-ui-Sj4" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="M0X-Bn-5XJ"/>
+                            <constraint firstItem="ble-AW-7GU" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="1.6" id="NFE-Sp-Xmx"/>
+                            <constraint firstItem="sgp-rv-oNT" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.045" id="Nsw-Fc-ZK6"/>
+                            <constraint firstItem="sgp-rv-oNT" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.314" id="QGT-Qo-pC4"/>
+                            <constraint firstItem="sgp-rv-oNT" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.87" id="QmY-oy-LJw"/>
+                            <constraint firstItem="RkY-Mm-b66" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" id="RVf-FJ-ml8"/>
+                            <constraint firstItem="uVw-oe-R8C" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.646" id="RfE-0F-iSj"/>
+                            <constraint firstItem="uVw-oe-R8C" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.045" id="RjS-gU-8dt"/>
+                            <constraint firstItem="Vgi-Fq-M4q" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.314" id="S7b-8B-dBo"/>
+                            <constraint firstItem="qvI-YR-o2p" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.314" id="TU9-u3-eoh"/>
+                            <constraint firstItem="TGD-Ry-egl" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.314" id="TcJ-Db-SQ3"/>
+                            <constraint firstItem="aiH-0S-wl7" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="1.33" id="VgL-Gf-sK8"/>
+                            <constraint firstItem="Pz0-uM-jRE" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.12" id="WTs-NW-ZZb"/>
+                            <constraint firstItem="w9X-OY-Htf" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.87" id="X6k-rW-ykH"/>
+                            <constraint firstItem="TGD-Ry-egl" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.045" id="YHd-uh-EdG"/>
+                            <constraint firstItem="RkY-Mm-b66" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.75" id="Yxn-lD-AEC"/>
+                            <constraint firstItem="sJF-in-Fvn" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" multiplier="0.63" id="a4T-EG-pqy"/>
+                            <constraint firstItem="TGD-Ry-egl" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" multiplier="0.554" id="cbN-EH-Kyh"/>
+                            <constraint firstItem="cdY-yZ-omg" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.314" id="ccM-pd-rcn"/>
+                            <constraint firstItem="K5o-51-XpC" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" multiplier="1.37" id="dpF-ys-tb2"/>
+                            <constraint firstItem="RkY-Mm-b66" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.0111" id="feV-ma-gFG"/>
+                            <constraint firstItem="mCg-ui-Sj4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kp6-Na-8Od"/>
+                            <constraint firstItem="qvI-YR-o2p" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="1.092" id="lPl-V7-fWf"/>
+                            <constraint firstItem="qvI-YR-o2p" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.045" id="mbs-lw-zDq"/>
+                            <constraint firstItem="K5o-51-XpC" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.38" id="noc-IF-feo"/>
+                            <constraint firstItem="cdY-yZ-omg" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.045" id="pv6-HD-9Cy"/>
+                            <constraint firstItem="ble-AW-7GU" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.08" id="qRQ-V6-YEO"/>
+                            <constraint firstItem="qvI-YR-o2p" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" multiplier="1.44" id="rmA-fJ-WSZ"/>
+                            <constraint firstItem="ble-AW-7GU" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.46" id="rsL-lM-rj2"/>
+                            <constraint firstItem="w9X-OY-Htf" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.34" id="rvr-zW-VXg"/>
+                            <constraint firstItem="Pz0-uM-jRE" firstAttribute="width" secondItem="mCg-ui-Sj4" secondAttribute="width" multiplier="0.83" id="s2b-5p-vaY"/>
+                            <constraint firstItem="aiH-0S-wl7" firstAttribute="centerX" secondItem="mCg-ui-Sj4" secondAttribute="centerX" id="s32-WU-tda"/>
+                            <constraint firstItem="Vgi-Fq-M4q" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="1.092" id="w1a-lU-EgX"/>
+                            <constraint firstItem="K5o-51-XpC" firstAttribute="height" secondItem="mCg-ui-Sj4" secondAttribute="height" multiplier="0.071" id="wha-CP-cZe"/>
+                            <constraint firstItem="cdY-yZ-omg" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.87" id="yDa-nG-qAp"/>
+                            <constraint firstItem="RkY-Mm-b66" firstAttribute="centerY" secondItem="mCg-ui-Sj4" secondAttribute="centerY" multiplier="0.465" id="zGD-T3-gQg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="profit-chart" id="c1P-SY-a02">
+                        <color key="badgeColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="checkBtn" destination="ble-AW-7GU" id="MnD-9o-sKg"/>
+                        <outlet property="checkLbl" destination="aiH-0S-wl7" id="rRu-Xo-8ob"/>
+                        <outlet property="event1" destination="TGD-Ry-egl" id="fIC-Tq-Mfh"/>
+                        <outlet property="event2" destination="cdY-yZ-omg" id="iR7-3k-FFP"/>
+                        <outlet property="event3" destination="Vgi-Fq-M4q" id="sZm-zf-Ggy"/>
+                        <outlet property="price1" destination="uVw-oe-R8C" id="q5q-pP-vEj"/>
+                        <outlet property="price2" destination="sgp-rv-oNT" id="VEo-pH-Rhf"/>
+                        <outlet property="price3" destination="qvI-YR-o2p" id="T9J-2r-kX4"/>
+                        <outlet property="sumPrice" destination="K5o-51-XpC" id="ozK-cN-fUD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1044" y="-347.67616191904051"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="rLu-EO-PZM">
+            <objects>
+                <viewController id="l9f-PE-iVE" customClass="Description_ViewController" customModule="WinOdds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FUi-ef-pJI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="sY2-WO-dlQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzt-9l-rEi">
+                                <rect key="frame" x="27.5" y="175.5" width="359" height="601"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">This application will help you to get the better bet.
+The application offers you an option to increase the bet amount to a certain extent. The app principle is: You have the game's three situation and actually make simultaneously three bet , finally according to your bet you will get more money, than you had before.
+You just have to point the amount of money you want to play with then you need to fill the respective fields with the game's coefficient and the rest will show the application after clicking check button .  </string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.99309484824993255" blue="0.98942016211109085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="23" name="Charter-BoldItalic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGg-mx-JWp" customClass="MyView" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="156.5" width="359" height="9"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcy-E7-zvC" customClass="MyLabel" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="85" y="72" width="244" height="73"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Description">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Charter-BoldItalic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.91372549020000005" green="0.29803921570000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColorForCustom">
+                                        <color key="value" red="0.98039215690000003" green="0.2265708776" blue="0.47418085970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetForCustom">
+                                        <size key="value" width="4" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusForCustom">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhe-NR-F3d" customClass="MyView" customModule="WinOdds" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="786.5" width="359" height="9"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                        <color key="value" red="0.39928150179999999" green="0.8001087308" blue="0.60225290060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3gS-28-YKI"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sY2-WO-dlQ" firstAttribute="leading" secondItem="3gS-28-YKI" secondAttribute="leading" id="0tK-uZ-gzi"/>
+                            <constraint firstItem="sY2-WO-dlQ" firstAttribute="trailing" secondItem="3gS-28-YKI" secondAttribute="trailing" id="1lQ-fB-Jm9"/>
+                            <constraint firstItem="Gzt-9l-rEi" firstAttribute="width" secondItem="sY2-WO-dlQ" secondAttribute="width" multiplier="0.868" id="4gi-ud-0e3"/>
+                            <constraint firstItem="CGg-mx-JWp" firstAttribute="width" secondItem="sY2-WO-dlQ" secondAttribute="width" multiplier="0.868" id="7dl-MO-HhG"/>
+                            <constraint firstItem="rhe-NR-F3d" firstAttribute="top" secondItem="Gzt-9l-rEi" secondAttribute="bottom" constant="10" id="AJe-OJ-xtT"/>
+                            <constraint firstItem="sY2-WO-dlQ" firstAttribute="top" secondItem="FUi-ef-pJI" secondAttribute="top" id="CYL-oZ-BYP"/>
+                            <constraint firstItem="qcy-E7-zvC" firstAttribute="top" secondItem="3gS-28-YKI" secondAttribute="top" constant="28" id="ETW-Q8-nYR"/>
+                            <constraint firstItem="CGg-mx-JWp" firstAttribute="top" secondItem="qcy-E7-zvC" secondAttribute="bottom" constant="11.333333333333357" id="OHo-6l-RrZ"/>
+                            <constraint firstItem="CGg-mx-JWp" firstAttribute="height" secondItem="sY2-WO-dlQ" secondAttribute="height" multiplier="0.0111" id="ONe-qM-jln"/>
+                            <constraint firstItem="Gzt-9l-rEi" firstAttribute="top" secondItem="CGg-mx-JWp" secondAttribute="bottom" constant="10" id="X3Z-up-XV6"/>
+                            <constraint firstItem="Gzt-9l-rEi" firstAttribute="centerX" secondItem="sY2-WO-dlQ" secondAttribute="centerX" id="b5v-Hg-Ift"/>
+                            <constraint firstItem="qcy-E7-zvC" firstAttribute="centerX" secondItem="sY2-WO-dlQ" secondAttribute="centerX" id="bJU-dV-dnY"/>
+                            <constraint firstItem="qcy-E7-zvC" firstAttribute="width" secondItem="sY2-WO-dlQ" secondAttribute="width" multiplier="0.59" id="cZN-TT-1dh"/>
+                            <constraint firstAttribute="bottom" secondItem="sY2-WO-dlQ" secondAttribute="bottom" id="deT-w4-Swl"/>
+                            <constraint firstItem="rhe-NR-F3d" firstAttribute="centerX" secondItem="sY2-WO-dlQ" secondAttribute="centerX" id="dub-O2-k81"/>
+                            <constraint firstItem="rhe-NR-F3d" firstAttribute="width" secondItem="sY2-WO-dlQ" secondAttribute="width" multiplier="0.868" id="f9c-ez-yzF"/>
+                            <constraint firstItem="rhe-NR-F3d" firstAttribute="height" secondItem="sY2-WO-dlQ" secondAttribute="height" multiplier="0.0111" id="fb3-TN-BGg"/>
+                            <constraint firstItem="qcy-E7-zvC" firstAttribute="height" secondItem="sY2-WO-dlQ" secondAttribute="height" multiplier="0.09" id="jm8-jw-cbQ"/>
+                            <constraint firstItem="CGg-mx-JWp" firstAttribute="centerX" secondItem="sY2-WO-dlQ" secondAttribute="centerX" id="mRO-TT-n5d"/>
+                            <constraint firstItem="3gS-28-YKI" firstAttribute="bottom" secondItem="rhe-NR-F3d" secondAttribute="bottom" constant="17.5" id="rib-1f-LOZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="information" id="4s2-cd-6Ke"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wET-Fu-kwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1044" y="337.78110944527737"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="K5o-51-XpC">
+            <size key="intrinsicContentSize" width="101" height="58"/>
+        </designable>
+        <designable name="Pz0-uM-jRE">
+            <size key="intrinsicContentSize" width="282.5" height="14.5"/>
+        </designable>
+        <designable name="TGD-Ry-egl">
+            <size key="intrinsicContentSize" width="55.5" height="25.5"/>
+        </designable>
+        <designable name="Vgi-Fq-M4q">
+            <size key="intrinsicContentSize" width="55.5" height="25.5"/>
+        </designable>
+        <designable name="aiH-0S-wl7">
+            <size key="intrinsicContentSize" width="95" height="73.5"/>
+        </designable>
+        <designable name="ble-AW-7GU">
+            <size key="intrinsicContentSize" width="70" height="42"/>
+        </designable>
+        <designable name="cdY-yZ-omg">
+            <size key="intrinsicContentSize" width="55.5" height="25.5"/>
+        </designable>
+        <designable name="qcy-E7-zvC">
+            <size key="intrinsicContentSize" width="166.5" height="40.5"/>
+        </designable>
+        <designable name="qvI-YR-o2p">
+            <size key="intrinsicContentSize" width="36" height="24"/>
+        </designable>
+        <designable name="sJF-in-Fvn">
+            <size key="intrinsicContentSize" width="139" height="57.5"/>
+        </designable>
+        <designable name="sgp-rv-oNT">
+            <size key="intrinsicContentSize" width="36" height="24"/>
+        </designable>
+        <designable name="uVw-oe-R8C">
+            <size key="intrinsicContentSize" width="36" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="background" width="1152" height="2048"/>
+        <image name="guide" width="24" height="24"/>
+        <image name="information" width="24" height="24"/>
+        <image name="profit-chart" width="24" height="24"/>
+    </resources>
+</document>
